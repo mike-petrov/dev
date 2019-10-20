@@ -26,23 +26,29 @@ docker run -p 5000:3000 project_name
 ## Пример для разработки на react
 
 ### Структура проекта
+```
 /project_name
 —/web
 —.dockerignore
 —Dockerfile
+```
 
 ### dockerfile
+```
 FROM node:latest
 WORKDIR /web
 COPY package*.json ./
 RUN npm install --silent
 COPY /web /web
 CMD ["npm", "start"]
+```
 
 ### dockerignore
+```
 .git
 build
 node_modules
+```
 
 ## Удаление мусора
 
