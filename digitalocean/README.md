@@ -40,12 +40,27 @@ sudo ufw default allow outgoing // разрешение исходящих па�
 cat /var/log/ufw.log // логи firewall
 ```
 8. Бесплатный SSL ([подробнее](https://certbot.eff.org/help))
-
 ```
 sudo certbot --nginx // запуск
 ```
 9. Flask ([подробнее](https://www.8host.com/blog/obsluzhivanie-prilozhenij-flask-s-pomoshhyu-uwsgi-i-nginx-v-ubuntu-16-04/))
+```
+python run.py // запуск
+```
 
+## Дополнение
 
-## Другие гайды
-* https://gist.github.com/tomasevich/a2fe588c451c5a192893e6521a813020#file-nginx_nodejs-md
+1. Logs Nginx
+```
+cat /var/log/nginx/access.log // access
+cat /var/log/nginx/error.log // error
+```
+2. Права для проекта
+```
+chmod 755 /folder // права для дерикторий
+chmod 644 /folder // права для файлов
+```
+2. Активация виртуальных хостов (sites-available -> sites-enabled)
+```
+ln -s /etc/nginx/sites-available/file.conf /etc/nginx/sites-enabled/ // права для дерикторий
+```
