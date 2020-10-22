@@ -51,6 +51,46 @@ sudo certbot --nginx // запуск
 ```
 python run.py // запуск
 ```
+9. Mongodb ([подробнее](https://www.digitalocean.com/community/tutorials/how-to-install-and-secure-mongodb-on-ubuntu-16-04))
+##### Создание пользователя
+```
+mongo
+
+use admin
+db.createUser(
+  {
+    user: "user",
+    pwd: "password",
+    roles: [ { role: "userAdminAnyDatabase", db: "admin" } ]
+  }
+)
+```
+##### Включение аутентификации
+```
+sudo nano /etc/mongod.conf
+
+security:
+  authorization: "enabled"
+
+sudo systemctl restart mongod
+```
+##### Включение файервол
+```
+sudo ufw enable
+sudo ufw status
+sudo ufw allow from client_ip_address to any port 27017
+```
+##### Настройка публичного bindIP
+```
+sudo nano /etc/mongod.conf
+
+net:
+  port: 27017
+  bindIp: 127.0.0.1, IP_of_MongoHost
+
+sudo systemctl restart mongod
+```
+
 
 ## Дополнение
 
