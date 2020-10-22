@@ -8,6 +8,10 @@
 ```
 sudo apt install nodejs // установка node js
 sudo apt install npm // установка пакетного менеджера
+
+// при ошибке E: Unable to locate package npm
+curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
+sudo apt-get install -y nodejs
 ```
 4. Пользователи ([подробнее](https://www.8host.com/blog/sozdanie-polzovatelya-sudo-v-ubuntu))
 ```
@@ -60,7 +64,11 @@ cat /var/log/nginx/error.log // error
 chmod 755 /folder // права для дерикторий
 chmod 644 /folder // права для файлов
 ```
-2. Активация виртуальных хостов (sites-available -> sites-enabled)
+3. Активация виртуальных хостов (sites-available -> sites-enabled)
 ```
-ln -s /etc/nginx/sites-available/file.conf /etc/nginx/sites-enabled/ // права для дерикторий
+ln -s /etc/nginx/sites-available/file.conf /etc/nginx/sites-enabled/
+```
+4. Запоминание логина и пароля от github
+```
+git config credential.helper store
 ```

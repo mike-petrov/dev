@@ -1,9 +1,16 @@
 from flask import Flask, render_template
+from flask_limiter import Limiter
+from flask_limiter.util import get_remote_address
 from flask_socketio import SocketIO, emit
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'secret'
-socketio = SocketIO(app)
+
+limiter = Limiter(
+    app,
+    key_func=get_remote_address,
+    default_limits=["400 per day", "70 per hour"]
+)
 
 @socketio.on('call', namespace='/space')
 def rtc_call(mes):
@@ -12,26 +19,15 @@ def rtc_call(mes):
                 'room': mes['room'],
         }, namespace='/space')
 
-@socketio.on('answer', namespace='/space')
-def rtc_answer(mes):
-        socketio.emit('answer', {
-                'description': mes['description'],
-                'room': mes['room'],
-        }, namespace='/space')
-
-@socketio.on('cand1', namespace='/space')
-def rtc_cond1(mes):
-        socketio.emit('cand1', {
-                'description': mes['description'],
-                'room': mes['room'],
-        }, namespace='/space')
-
-@socketio.on('cand2', namespace='/space')
-def rtc_cond2(mes):
-        socketio.emit('cand2', {
-                'description': mes['description'],
-                'room': mes['room'],
-        }, namespace='/space')
+@app.route('/geo', methods=['POST'])
+@limiter.limit("10 per minute")
+def geo():
+    return jsonify({ 'server': 'true' })
 
 if __name__ == '__main__':
-    socketio.run(app,host='127.0.0.1', port=5050)
+	app.run(
+		host='127.0.0.1',
+		port='5051',
+		debug=True,
+		threaded=True,
+	)
