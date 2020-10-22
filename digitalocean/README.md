@@ -74,13 +74,13 @@ security:
 
 sudo systemctl restart mongod
 ```
-##### Включение файервол
+##### Включение файервола
 ```
 sudo ufw enable
 sudo ufw status
 sudo ufw allow from client_ip_address to any port 27017
 ```
-##### Настройка публичного bindIP
+##### Настройка публичного ip
 ```
 sudo nano /etc/mongod.conf
 
