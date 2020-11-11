@@ -10,3 +10,4 @@
 [``` mongodb ```](mongodb) | Взаимодействие с mongodb
 [``` phpmyadmin ```](phpmyadmin) | Установка phpmyadmin на ubuntu
 [``` ttl ```](ttl) | Смена ttl на macOS
+[``` JWT-Flask ```](JWT-Flask) | JWT авторизация на flask
