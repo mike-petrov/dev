@@ -112,3 +112,16 @@ ln -s /etc/nginx/sites-available/file.conf /etc/nginx/sites-enabled/
 ```
 git config credential.helper store
 ```
+5. Активация env:
+```
+python3 -m venv env
+source env/bin/activate
+pip3 install -r requirements.txt
+```
+6. Проверка обновлении пакетов и обновление пакета до последней версии:
+```
+npm outdated --depth=0
+```
+```
+npm i react@latest
+```
