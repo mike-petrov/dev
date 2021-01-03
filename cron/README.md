@@ -31,3 +31,8 @@ MAILTO="mike@mikepetrov.ru"
 ```
 MAILTO=""
 ```
+
+#### Обязательно выставить права на исполняемый path для cron:
+```
+chmod 777 /var/www/script.sh
+```
