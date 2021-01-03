@@ -12,4 +12,4 @@
 [``` ttl ```](ttl) | Смена ttl на macOS
 [``` JWT-Flask ```](JWT-Flask) | JWT авторизация на flask
 [``` cron ```](cron) | cron задача на сервере
-[``` YandexAPI ```](yandexAPI) | Yandex API для различных задач
+[``` YandexAPI ```](YandexAPI) | Yandex API для различных задач
