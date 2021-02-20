@@ -112,16 +112,24 @@ ln -s /etc/nginx/sites-available/file.conf /etc/nginx/sites-enabled/
 ```
 git config credential.helper store
 ```
-5. Активация env:
+5. Активация env
 ```
 python3 -m venv env
 source env/bin/activate
 pip3 install -r requirements.txt
 ```
-6. Проверка обновлении пакетов и обновление пакета до последней версии:
+6. Проверка обновлении пакетов и обновление пакета до последней версии
 ```
 npm outdated --depth=0
 ```
 ```
 npm i react@latest
+```
+7. Загрузка больших файлов Nginx (Увеличение максимально допустимого размера тела запроса клиента)
+```
+sudo nano /etc/nginx/nginx.conf
+```
+```
+types_hash_max_size 20480;
+client_max_body_size 30m;
 ```
