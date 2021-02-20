@@ -13,3 +13,4 @@
 [``` JWT-Flask ```](JWT-Flask) | JWT авторизация на flask
 [``` cron ```](cron) | cron задача на сервере
 [``` YandexAPI ```](YandexAPI) | Yandex API для различных задач
+[``` ChromeExtension ```](ChromeExtension) | Создание расширения для Chrome
