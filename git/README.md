@@ -1,28 +1,43 @@
 # git
 
+## Хранение учетных данных
+### GCM Core ([Подробнее](https://docs.github.com/en/get-started/getting-started-with-git/caching-your-github-credentials-in-git))
+```
+brew tap microsoft/git
+brew install --cask git-credential-manager-core
+// если ошибка
+git config --global credential.credentialStore cache
+```
 
-Откатить коммиты и залить
+### Обновление конфига
+```
+git config --global user.name "<name>"
+git config --global user.email "<email>"
+git config --global user.password "<password>"
+```
+
+## Основные команды
+### Откатить коммиты и залить
+```
 git reset --hard <hash>
 git push --force
+```
 
-Переключаться на ветку
+### Переключаться на ветку
+```
 git checkout <branch_name>
+```
 
-Насильно обновить локальный репозиторий
+### Насильно обновить локальный репозиторий
+```
 git fetch --all
-git reset --hard origin/master
-git pull origin master
+git reset --hard
+git pull
+```
 
-Авторизация
-git config --global user.name "<логин>"
-git config --global user.email "<почта>"
-git config --global user.password "<пароль>"
-
-Слить ветки master и dev
+### Слить ветки master и dev
+```
 git checkout master
 git merge dev
 git push
-
-git-credential-manager-core
-если ошибка
-git config --global credential.credentialStore cache
+```
