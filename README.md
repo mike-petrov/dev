@@ -16,3 +16,4 @@
 [``` cron ```](cron) | cron задача на сервере
 [``` YandexAPI ```](YandexAPI) | Yandex API для различных задач
 [``` ChromeExtension ```](ChromeExtension) | Создание расширения для Chrome
+[``` instAPI ```](instAPI) | Подключение и работа с API Instagram
