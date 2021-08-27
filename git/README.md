@@ -16,6 +16,11 @@ git config --global user.email "<email>"
 git config --global user.password "<password>"
 ```
 
+### Запоминание логина и пароля от github
+```
+git config credential.helper store
+```
+
 ## Основные команды
 ### Откатить коммиты и залить
 ```
