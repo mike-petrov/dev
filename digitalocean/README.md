@@ -108,28 +108,21 @@ chmod 644 /folder // права для файлов
 ```
 ln -s /etc/nginx/sites-available/file.conf /etc/nginx/sites-enabled/
 ```
-4. Запоминание логина и пароля от github
-```
-git config credential.helper store
-```
-5. Активация env
+4. Активация env
 ```
 python3 -m venv env
 source env/bin/activate
 pip3 install -r requirements.txt
 ```
-6. Проверка обновлении пакетов и обновление пакета до последней версии
-```
-npm outdated --depth=0
-```
-```
-npm i react@latest
-```
-7. Загрузка больших файлов Nginx (Увеличение максимально допустимого размера тела запроса клиента)
+5. Загрузка больших файлов Nginx (Увеличение максимально допустимого размера тела запроса клиента)
 ```
 sudo nano /etc/nginx/nginx.conf
 ```
 ```
 types_hash_max_size 20480;
 client_max_body_size 30m;
+```
+6. Поменять владельца файла/папки
+```
+sudo chown -R $USER
 ```
