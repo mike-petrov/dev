@@ -45,6 +45,7 @@ cat /var/log/ufw.log // логи firewall
 ```
 8. Бесплатный SSL ([подробнее](https://certbot.eff.org/help))
 ```
+sudo snap install --classic certbot
 sudo certbot --nginx // запуск
 ```
 9. Flask ([подробнее](https://www.8host.com/blog/obsluzhivanie-prilozhenij-flask-s-pomoshhyu-uwsgi-i-nginx-v-ubuntu-16-04/))
