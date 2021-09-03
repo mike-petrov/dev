@@ -8,6 +8,7 @@ brew install --cask git-credential-manager-core
 // если ошибка
 git config --global credential.credentialStore cache
 ```
+[Ubuntu](https://github.com/microsoft/Git-Credential-Manager-Core)
 
 ### Обновление конфига
 ```
