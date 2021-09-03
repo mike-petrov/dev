@@ -116,7 +116,7 @@ chmod 644 /folder // права для файлов
 ```
 3. Активация виртуальных хостов (sites-available -> sites-enabled)
 ```
-ln -s /etc/nginx/sites-available/file.conf /etc/nginx/sites-enabled/
+ln -s /etc/nginx/sites-available/<file_name> /etc/nginx/sites-enabled/
 ```
 4. Активация env
 ```
@@ -135,4 +135,8 @@ client_max_body_size 30m;
 6. Поменять владельца файла/папки
 ```
 sudo chown -R $USER
+```
+7. Сохранить зависимости
+```
+pip freeze > requirements.txt
 ```
