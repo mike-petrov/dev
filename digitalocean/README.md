@@ -52,7 +52,7 @@ sudo certbot --nginx // запуск
 ```
 python run.py // запуск
 ```
-9. Mongodb ([подробнее](https://www.digitalocean.com/community/tutorials/how-to-install-and-secure-mongodb-on-ubuntu-16-04))
+9. Mongodb ([подробнее](https://www.digitalocean.com/community/tutorials/how-to-install-and-secure-mongodb-on-ubuntu-16-04) | [удаление](https://ask-ubuntu.ru/questions/602070/kak-udalit-mongodb-i-ustanovit-poslednyuyu-versiyu))
 ##### Создание пользователя
 ```
 mongo
@@ -91,7 +91,16 @@ net:
 
 sudo systemctl restart mongod
 ```
+##### Сделать публичным все ip
+```
+sudo nano /etc/mongod.conf
 
+net:
+  port: 27017
+  bindIp: 0.0.0.0
+
+sudo systemctl restart mongod
+```
 
 ## Дополнение
 
