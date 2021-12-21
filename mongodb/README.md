@@ -1,5 +1,11 @@
 # mongodb
 
+## Dump ([подробнее](https://docs.mongodb.com/manual/tutorial/backup-and-restore-tools/))
+```
+mongodump --host=127.0.0.1 --port=27017 --username=<username> --password=<password> --out=/opt/backup/mongodump-2021-12-21
+
+mongorestore --host=127.0.0.1 --port=27017 --username=<username>  --authenticationDatabase=admin /opt/backup/mongodump-2021-12-21
+```
 ## Основные операции
 ```
 db.createCollection("users") // добавление коллекции
