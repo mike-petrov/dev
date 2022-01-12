@@ -8,6 +8,7 @@
 [``` git ```](git) | Самое важное о git
 [``` npm ```](npm) | Самое важное о npm
 [``` digitalocean ```](digitalocean) | Создание nginx сервера с виртуальными хостами
+[``` win2019server ```](win2019server) | Windows как хостинг
 [``` docker ```](docker) | Докер образ и всё что с ним связано
 [``` mongodb ```](mongodb) | Взаимодействие с mongodb
 [``` phpmyadmin ```](phpmyadmin) | Установка phpmyadmin на ubuntu
