@@ -51,16 +51,15 @@ node_modules
 ```
 
 ## Удаление мусора
+Удалить неиспользуемые данные
+```
+docker system prune -a
+```
 
-### Остановить все Docker контейнеры
+Очистить всё
 ```
-docker stop $(docker ps -a -q)
+docker kill $(docker ps -q)
+docker_clean_ps
+docker rmi $(docker images -a -q)
 ```
-### Удалить все Docker контейнеры
-```
-docker rm $(docker ps -a -q)
-```
-### Удалить неиспользованные Docker образы:
-```
-docker image prune -a -f
-```
+
