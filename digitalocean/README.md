@@ -140,3 +140,9 @@ sudo chown -R $USER
 ```
 pip freeze > requirements.txt
 ```
+8. Выбрать нужный питон ([подробнее](https://www.itsupportwale.com/blog/how-to-upgrade-to-python-3-9-0-on-ubuntu-18-04-lts/))
+```
+sudo update-alternatives --config python3
+apt-get install python3.9-dev python3.9-venv
+sudo apt-get remove python3.6 # удалить не нужный
+```
