@@ -55,7 +55,7 @@ python run.py // запуск
 9. Mongodb ([подробнее](https://www.mongodb.com/docs/manual/tutorial/install-mongodb-on-ubuntu/) | [удаление](https://ask-ubuntu.ru/questions/602070/kak-udalit-mongodb-i-ustanovit-poslednyuyu-versiyu))
 ##### Создание пользователя
 ```
-mongo
+mongo (либо mongosh)
 
 use admin
 db.createUser(
