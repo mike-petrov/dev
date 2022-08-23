@@ -52,7 +52,7 @@ sudo certbot --nginx // запуск
 ```
 python run.py // запуск
 ```
-9. Mongodb ([подробнее](https://www.digitalocean.com/community/tutorials/how-to-install-and-secure-mongodb-on-ubuntu-16-04) | [удаление](https://ask-ubuntu.ru/questions/602070/kak-udalit-mongodb-i-ustanovit-poslednyuyu-versiyu))
+9. Mongodb ([подробнее](https://www.mongodb.com/docs/manual/tutorial/install-mongodb-on-ubuntu/) | [удаление](https://ask-ubuntu.ru/questions/602070/kak-udalit-mongodb-i-ustanovit-poslednyuyu-versiyu))
 ##### Создание пользователя
 ```
 mongo
