@@ -7,6 +7,7 @@
 ---|---
 [``` git ```](git) | Самое важное о git
 [``` npm ```](npm) | Самое важное о npm
+[``` ssh ```](ssh) | Самое важное о ssh
 [``` digitalocean ```](digitalocean) | Создание nginx сервера с виртуальными хостами
 [``` win2019server ```](win2019server) | Windows как хостинг
 [``` docker ```](docker) | Докер образ и всё что с ним связано
