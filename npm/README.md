@@ -7,3 +7,7 @@ npm outdated --depth=0
 ```
 npm i react@latest
 ```
+#### Поиск уязвимостей
+```
+npm audit --production
+```
