@@ -142,7 +142,9 @@ pip freeze > requirements.txt
 ```
 8. Выбрать нужный питон ([подробнее](https://www.itsupportwale.com/blog/how-to-upgrade-to-python-3-9-0-on-ubuntu-18-04-lts/))
 ```
-sudo update-alternatives --config python3
-apt-get install python3.9-dev python3.9-venv
-sudo apt-get remove python3.6 # удалить не нужный
+sudo update-alternatives --config python3 
+ls /usr/bin/python* # посмотреть все
+sudo apt-get remove --auto-remove python3.8 # удалить ненужный
 ```
+9. Установить питон ([подробнее](https://gist.github.com/basaks/652eea861a143a9b3d11805c96273488))
+
